@@ -10,7 +10,7 @@ using SongLibrary.Domain;
 namespace SongLibrary.Migrations
 {
     [DbContext(typeof(SongLibraryDbContext))]
-    [Migration("20220129113917_InitialCreate")]
+    [Migration("20220131140101_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -92,8 +92,8 @@ namespace SongLibrary.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long>("Duration")
-                        .HasColumnType("bigint");
+                    b.Property<TimeSpan>("Duration")
+                        .HasColumnType("time");
 
                     b.Property<int>("GenreId")
                         .HasColumnType("int");

@@ -44,7 +44,7 @@ namespace SongLibrary.Migrations
                     SongId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Duration = table.Column<long>(type: "bigint", nullable: false),
+                    Duration = table.Column<TimeSpan>(type: "time", nullable: false),
                     ReleasedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
                     GenreId = table.Column<int>(type: "int", nullable: false)
                 },

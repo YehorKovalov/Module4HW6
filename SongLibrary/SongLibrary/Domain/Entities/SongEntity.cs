@@ -7,12 +7,12 @@ namespace SongLibrary.Domain.Entities
     {
         public int SongId { get; set; }
         public string Title { get; set; }
-        public long Duration { get; set; }
+        public TimeSpan Duration { get; set; }
         public DateTimeOffset ReleasedDate { get; set; }
 
         public int GenreId { get; set; }
         public GenreEntity Genre { get; set; }
 
-        public ICollection<ArtistEntity> Artists { get; set; }
+        public ICollection<ArtistEntity> Artists { get; set; } = new List<ArtistEntity>();
     }
 }

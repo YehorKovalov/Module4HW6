@@ -12,6 +12,6 @@ namespace SongLibrary.Domain.Entities
         public string Email { get; set; }
         public string InstagramURL { get; set; }
 
-        public ICollection<SongEntity> Songs { get; set; }
+        public ICollection<SongEntity> Songs { get; set; } = new List<SongEntity>();
     }
 }
